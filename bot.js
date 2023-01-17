@@ -1,4 +1,4 @@
-const token = ('Nzk2MjE4MTI0OTM1NDk1Njkw.X_Ut6g.JyenJp5nYeuFxO6STxlRCW48Fgw');
+const token = ('seu_token_discord_aqui');
 
 
 'use strict';
@@ -30,16 +30,16 @@ bot.on('ready', () => {
 
 //boas vindas
 bot.on('guildMemberAdd', (member) => {
-    //let guild = client.guild.cache.get("793243104463159347"); //ID SERVIDOR
-    //let channel = client.channels.cache.get("796447909888786482"); //ID CANAL
-    let channelID = '796447909888786482';
-    if(member.guild.id != '793243104463159347') return;
+    //let guild = client.guild.cache.get("id_do_servidor"); //ID SERVIDOR
+    //let channel = client.channels.cache.get("id_do_canal"); //ID CANAL
+    let channelID = 'id_do_canal';
+    if(member.guild.id != 'id_do_servidor') return;
     let emoji = member.guild.emojis.cache.find(emoji => emoji.name === 'knife'); //emoji
     let embed = new Discord.MessageEmbed()
     .setAuthor(member.user.tag, member.user.displayAvatarURL())
     .setTitle (`${emoji} Bem vinda :) ${emoji}`)
     .setDescription(`${member.user.tag}, Bem vinda, investigadora! A sede da Criminal Mand Investigations está aberta para você explorar, sugerir, investigar e até dar uma conversada na copa!`)
-    .addField('Canais', 'lembre-se de ler as regras do servidor: <#793275801105465377> ')
+    .addField('Canais', 'lembre-se de ler as regras do servidor: <#id_do_canal_de_regras> ')
     .setThumbnail(member.user.displayAvatarURL({dynamic: true, format: "png", size: 1024}))
     .setFooter('ID do usuário: '+ member.user.id)
     .setTimestamp();
